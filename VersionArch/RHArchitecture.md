@@ -8,7 +8,7 @@
 Управление сообществом и принятие коллективных решений часто сталкивается с рядом проблем, которые без должной системы будут сильно тормозить развитие сообщества или более того его убивать.
 Одними из таких проблем выходят: импульсивность, эмоциональность, просто мусорные, заведомо злокачественные голосования, которые в последствии тратят время участников. 
 
-Данный документ описывает архитектуру системы голосований, изначально созданную для бота *RedVote*, хотя она может быть распространена и за его пределы. 
+Данный документ описывает архитектуру системы голосований, изначально созданную для бота *RedAdapter*, хотя она может быть распространена и за его пределы. 
 
 Обозначим, что пользователь имеет право использовать для голосования любой текст от любого человека подходящий под стандарт ACI *(Adequacy Check Instructions)*,
 позже я более подробно объясню что это, пока просто держите в уме, что ACI — некоторый стандарт и набор правил для проверки легитимности текста голосований и определения тира, про тиры также поговорим чуть позже.
@@ -41,7 +41,7 @@ I. Low
 Кворум по активным пользователям: 15%
 Время проведения: 24h
 
-- **`[Медиа]` / `[Косметика]`** — Добавление новых эмодзи, стикеров, смена аватарки или баннера сервера, изменение цветов ролей.
+- **`[Косметика]`** — Добавление новых эмодзи, стикеров, смена баннера сервера, изменение цветов ролей.
     
 - **`[Ивенты]`** — Предложения собраться поиграть, посмотреть фильм, провести временный конкурс на выходных (с созданием события в Discord).
     
@@ -75,12 +75,16 @@ III. High
     
 - **`[Интеграции]`** — Добавление на сервер ботов, которым требуются широкие права (удаление сообщений, выдача ролей, баны).
 
+- **`[Лого]`** — Смена логотипа сообщества. 
+
 IV. Crit
 
 Требуется процентов для победы: > 80%
 Время на охлаждение: 24h
 Кворум по активным пользователям: 75%
 Время проведения: 7d
+
+- **`[Название]`** — Смена названия сообщесвта.
 
 - **`[Система голосования]`** — Изменение работы самой системы голосований (изменение процентов кворума, времени КД, стандартов ACI).
     
@@ -117,7 +121,7 @@ IV. Crit
 Берётся статистика отправленых сообщений за 30 дней, отбрасываются все пользователи с 0 сообщений за 30 дней, на основе тех, кто остался строится масив, 
 а его медиана определяет порог активности. Всё то кол-во участников которое выше порога считается активным кол-во пользователей
 ```
-— RedVote, к примеру, логирует дату, время и пользователя который отправил сообщение без сохранения контента. На основе этих данных за каждым пользователем в настоящее время закрепляется
+— RedAdapter, к примеру, логирует дату, время и пользователя который отправил сообщение без сохранения контента. На основе этих данных за каждым пользователем в настоящее время закрепляется
 определённое кол-во сообщений, эти количества представляют из себя масив по которому и находится медиана, все сообщения отправленные 30 днями ранее удаляются.
 
 **Время проведения** — время на протяжении которого длиться голосование, чем выше тир, тем выше важность, тем больше даётся времени подумать и задействовать участников.
@@ -187,42 +191,43 @@ ACI выступает не как жесткий текстовый алгор�
 ADEQUACY CHECK INSTRUCTIONS (ACI)
 
 EVALUATION MANDATE AND OUTPUT REQUIREMENT:
-The evaluation must culminate in exactly two strictly formatted outputs based on the logical, structural, and categorical analysis of the submitted text.
-* Legitimacy [0 or 1]: Return 1 (TRUE/VALID) if and only if the text unconditionally satisfies ALL criteria outlined in Sections I through V. Return 0 (FALSE/INVALID) if the text violates even a single sub-clause of this protocol.
-* Theme of the text [1, 2, 3, or 4]: The structural intent of the text must be definitively classified into one of four systemic Tiers (defined in Section V). 
+The evaluation must culminate in exactly two strictly formatted outputs based on the structural and categorical analysis of the submitted text.
+- Legitimacy [0 or 1]: Return 1 (TRUE/VALID) if and only if the text unconditionally satisfies ALL criteria outlined in Sections I through III. Return 0 (FALSE/INVALID) if the text violates even a single sub-clause of this protocol.
+- Theme of the text [Tier 1, Tier 2, Tier 3, or Tier 4]: The structural intent of the text must be definitively classified into one of four systemic Tiers (defined in Section III).
 
 ***
 
-SECTION I: LINGUISTIC AND SEMANTIC COHERENCE (LEXICAL AXIOMS)
-To be validated, the text must utilize language exclusively for the transfer of coherent information.
-1. Syntactic Integrity: The combination of words must follow standard grammatical and syntactic rules. Word salads, randomized character strings, or intentionally obfuscated phrasing immediately nullify the proposal.
-2. Absurdity & Post-Irony Filter: The text must not rely on internet post-irony, meme-based logic, or surrealism. The proposal must exist within the objective reality of the community's operations.
-3. Semantic Clarity: What is explicitly written is all that exists. The proposal cannot rely on "unwritten context," inside jokes, or assumed knowledge. The core intent must be immediately comprehensible to a standard user.
+SECTION I: ANTI-SPAM AND BASIC COHERENCE
+1. Syntactic & Semantic Integrity: The text must consist of coherent language expressing a recognizable proposal, question, or appeal. Randomized character strings, word salads, flood, or empty messages without a clear subject immediately nullify the proposal (Legitimacy: 0).
+2. Actionable Intent: Unless submitted under Tier 1 [Опросы], the text must clearly state what concrete change, action, or decision is being put to a vote, along with its basic reason and goal.
 
-SECTION II: LOGICAL STRUCTURE AND CAUSALITY (THE XYZ TRIAD)
-A legitimate proposal must demonstrate an unbroken logical chain. The text must satisfy the following causal formula: X + Y -> Z (Action X, applied to Status Quo Y, rationally produces Expected Outcome Z).
-1. Actionability (X): The text must clearly define a concrete, executable action. It cannot be an abstract wish, a rhetorical question, or a vague complaint.
-2. Causal Justification (Y): The text must state an objective operational reason for the action. Proposals submitted "just for fun," "because I want to," or "to see what happens" fail the causality check (unless explicitly categorized under Tier 1 Cosmetic/Fun).
-3. Logical Consequence (Z): The stated expected outcome must rationally follow from the proposed action. If there is a logical disconnect between the action and the goal (e.g., "Remove the moderation team so the server's ping improves"), the proposal is invalid.
+SECTION II: SYSTEMIC PRESERVATION (REGULATION 0.2)
+1. Anti-Sabotage Filter: The democratic mechanism shall not be utilized for the intentional destruction of the community. Any vote aimed at deleting the server, wiping core infrastructure without operational transition, mass-banning users without cause, or bypassing fundamental security protocols immediately returns Legitimacy: 0.
 
-SECTION III: INFORMATIONAL NEUTRALITY AND OBJECTIVE FRAMING
-The text of a vote must serve strictly as a neutral ballot, not a propaganda leaflet or an emotional vector.
-1. Absence of Emotional Coercion: The text must not contain emotional blackmail, guilt-tripping, manipulative phrasing, or passive-aggressive ultimatums (e.g., "Vote yes if you actually care about this community").
-2. Prohibition of Loaded Terminology: The framing must be completely stripped of subjective, inflammatory, or inherently biased adjectives designed to pre-determine the voter's stance. 
-   - Invalid: "Do you agree to permanently ban the toxic, power-hungry user John?"
-   - Valid: "Do you agree to issue a permanent ban to user John for repeated rule violations?"
-3. Ad Hominem Ban: The proposal must address structural issues, documented actions, or community protocols. It must never attack the personal character, inherent traits, or external/real life of community members.
+SECTION III: CATEGORY ALIGNMENT AND TIER VERIFICATION
+The text must be analyzed to determine its true systemic impact. If the text attempts to combine multiple actions across different Tiers, it must be classified by the highest applicable Tier. If the assigned Tier exceeds the category selected by the author, the proposal is invalid.
 
-SECTION IV: SYSTEMIC PRESERVATION
-The democratic mechanism shall not be utilized to execute the destruction of the platform that hosts it.
-1. Systemic Suicide: Any vote aimed at the deletion of the community, mass-banning of the user base without specific operational cause, or deliberate sabotage of the digital infrastructure is instantly classified as a zero-state (0) proposition.
+- TIER 1 (Low):
+  * [Косметика]: Adding new emojis or stickers, changing the server banner, or modifying role colors (excludes changing the server logo/avatar or name).
+  * [Ивенты]: Proposals to gather for games, watch movies, or hold temporary weekend contests (including creating Discord events).
+  * [Опросы]: Casual polls with no systemic consequences for the server (e.g., "Which game is better?", "What are we watching this weekend?").
 
-SECTION V: CATEGORY ALIGNMENT AND TIER VERIFICATION
-The text must be analyzed to determine its true systemic impact. The correct Tier must be assigned based on the text's actual logical objective. If the text attempts to combine multiple actions across different Tiers, it must be classified by the highest applicable Tier.
-* TIER 1 (Low Impact / Routine): Temporary events, purely cosmetic changes (emojis, server icons), and casual polls with no systemic consequences. The action does not grant or remove permissions, does not alter server architecture, and does not penalize any user.
-* TIER 2 (Medium Impact / Organizational): Spatial and structural convenience. Creation, deletion, or renaming of text/voice channels; addition of standard cosmetic roles; minor disciplinary actions (e.g., short-term mutes not exceeding 2 hours); establishment of minor scheduling traditions.
-* TIER 3 (High Impact / Justice and Governance): Restriction of freedoms, distribution of authority, and rule modification. Banning, kicking, or long-term muting of a user; granting or revoking administrative/moderator privileges; integrating complex bots with moderation permissions; amending or adding official community rules.
-* TIER 4 (Critical Impact / Foundational Meta): Existential mechanics and core constitution. Altering the voting mechanisms (ACI parameters, cooldowns, quorum percentages); complete server theme shifts; database/economy wipes. 
+- TIER 2 (Mid):
+  * [Каналы]: Creating, deleting, renaming, or moving text and voice channels across categories.
+  * [Роли]: Creating new or deleting existing standard (non-administrative) user roles.
+  * [Формат]: Establishing permanent schedules or approving recurring community activities.
+
+- TIER 3 (High):
+  * [Правосудие]: Votes for banning, kicking, permanently banning, or issuing a long-term mute to a specific user, as well as amnesties (unbans) and public appeals.
+  * [Правила]: Adding new clauses to official server rules or altering the severity of penalties for violations.
+  * [Стафф]: Electing new moderators, helpers, or administrators; votes for revoking moderator privileges (impeachment).
+  * [Интеграции]: Adding bots to the server that require broad permissions (message deletion, role assignment, bans).
+  * [Лого]: Changing the official logo (avatar) of the community.
+
+- TIER 4 (Crit):
+  * [Название]: Changing the official name of the community.
+  * [Система голосования]: Altering the mechanics of the voting system itself (modifying quorum percentages, cooldown times, or ACI standards).
+  * [Фундамент]: Shifting the core theme of the server (e.g., transitioning from a small group to a large public community) or executing major foundational changes.
 
 ***
 
@@ -232,7 +237,7 @@ Legitimacy: [0 or 1]
 Theme of the text: [Tier 1, Tier 2, Tier 3, or Tier 4]
 ```
 
-— Он проверяет легитимность текста и соответствие тиров. В архитектуре RedVote каждый участник имеет право отправить запрос на проверку соответствия ACI командой `report <ID text> ACI`.
+— Он проверяет легитимность текста и соответствие тиров. В архитектуре RedAdapter каждый участник имеет право отправить запрос на проверку соответствия ACI командой `report <ID text> ACI`.
 В целом, можно реализовать проверку NLP до выхода самого голосования в массы, но в данной версии архитектуры я выбрал именно ручную проверку, а реализовывать её для каждого голосования даже
 без жалоб, скажем — не рационально. Любой управленец/модератор видя репорт на голосовании может проверить его хоть через тот же ИИ, опять же, право проверки сохраняется за каждым участником,
 просто именно модератор имеет право отклонить `reject <ID text> ACI` или одобрить `confirm <ID text> ACI` голосование.
