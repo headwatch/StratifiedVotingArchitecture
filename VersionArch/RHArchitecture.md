@@ -186,23 +186,28 @@ EVALUATION MANDATE AND OUTPUT REQUIREMENT:
 The evaluation must culminate in exactly two strictly formatted outputs based on the structural and systemic impact analysis of the submitted text.
 - Legitimacy [0 or 1]: Return 1 (TRUE/VALID) if and only if the text unconditionally satisfies ALL criteria outlined in Sections I and II. Return 0 (FALSE/INVALID) if the text violates even a single sub-clause of this protocol.
 
+
 - Theme of the text [Tier 1, Tier 2, Tier 3, or Tier 4]: The structural intent and maximum technical impact of the text must be definitively classified into one of four systemic Tiers (defined in Section III).
+
 
 
 SECTION I: ANTI-SPAM AND BASIC COHERENCE
 1. Syntactic and Semantic Integrity: The text must consist of coherent language expressing a recognizable proposal, question, or appeal. Randomized character strings, word salads, flood, or empty messages without a clear subject immediately nullify the proposal (Legitimacy: 0).
 
+
 2. Actionable Intent: Unless submitted as a casual poll under Tier 1 [Опросы], the text must clearly state what concrete change, action, or decision is being put to a vote, along with its basic reason and expected outcome.
 
 
-SECTION II: SYSTEMIC PRESERVATION (REGULATION 0.2)
-1. Anti-Sabotage Filter: The democratic mechanism shall not be utilized for the intentional destruction of the community. Any vote aimed at deleting the entire community, wiping core infrastructure without an operational transition plan (excluding legitimate cross-platform interventions or platform disconnection under Regulation 0.4.1), mass-banning users without cause, or disabling fundamental security protocols immediately returns Legitimacy: 0.
+SECTION II: SYSTEMIC PRESERVATION
+1. Anti-Sabotage Filter: The democratic mechanism shall not be utilized for the intentional destruction of the community. Any vote aimed at deleting the entire community, wiping core infrastructure without an operational transition plan (excluding legitimate cross-platform interventions or platform disconnection under Tier 4 [Площадки]), mass-banning users without cause, or disabling fundamental security protocols immediately returns Legitimacy: 0.
+
 
 
 SECTION III: SYSTEMIC IMPACT AND TIER CLASSIFICATION
 Core Classification Principle (Substance Over Form): The text must be classified based on its highest technical impact, permission level required, and reversibility — NOT by the casual wording used by the author. If a proposal combines multiple actions or disguises privileged permissions under a minor request, it MUST be assigned to the highest applicable Tier. When a proposal falls into a gray area between two Tiers, always escalate to the higher Tier.
 
 - TIER 1 (Low — Cosmetic, Social, Non-Structural):
+
 
   * Systemic Scope: Zero impact on server structure, rules, permissions, or permanent layout. Easily reversible or purely temporary/informational.
   * [Косметика]: Adding new emojis or stickers, changing the server banner, or modifying existing role colors (strictly excludes changing any local platform logo or the overarching community logo/name).
@@ -211,6 +216,7 @@ Core Classification Principle (Substance Over Form): The text must be classified
 
 - TIER 2 (Mid — Workspace Structure and Non-Privileged UX):
 
+
   * Systemic Scope: Alters the daily organization, channels, or non-privileged roles of the platform without granting any moderation/administrative permissions or changing behavioral rules. Fully reversible by standard staff.
   * [Каналы]: Creating, deleting, renaming, or moving text and voice channels or categories without restricting base user access rights.
   * [Роли]: Creating, modifying, or deleting standard user roles (notification tags, interest roles, cosmetic badges) that possess ZERO administrative, moderation, or channel-restriction permissions.
@@ -218,21 +224,23 @@ Core Classification Principle (Substance Over Form): The text must be classified
 
 - TIER 3 (High — Local Governance, Justice, Privileged Access, and Local Rules):
 
-  * Systemic Scope: Affects individual user rights/punishments, grants or revokes delegated administrative/moderation privileges (within the bounds of a specific platform), or modifies local platform sub-rules. All actions here remain subordinate to the Core Regulation and can be enforced or reversed by the voting system.
+
+  * Systemic Scope: Affects individual user rights/punishments, grants or revokes delegated administrative/moderation privileges (within the bounds of a specific platform), or modifies local platform sub-rules. All actions here remain subordinate to foundational community documents and can be enforced or reversed by the voting system.
   * [Правосудие]: Votes for banning, kicking, permanently banning, isolating, or issuing a long-term mute to a specific user, as well as amnesties (unbans) and public appeals from Restricted Users.
-  * [Локальные правила]: Adding, removing, or modifying local platform sub-rules (under Regulation 0.4) or altering the severity of penalties for local violations (strictly excludes changing the Core Regulation or Manifesto).
+  * [Локальные правила]: Adding, removing, or modifying local platform sub-rules or altering the severity of penalties for local violations (strictly excludes changing overarching community rules, charters, or manifestos).
   * [Стафф]: Electing or impeaching local moderators, helpers, and standard administrators whose powers are delegated and revocable within the system; modifying local recruitment questionnaires and staff rotation rules.
   * [Интеграции]: Adding, removing, or configuring bots and external webhooks that require privileged permissions (message management, role assignment, moderation).
   * [Локальное лого]: Changing the local avatar (logo) of a specific platform without altering the overarching main logo of the community.
 
 - TIER 4 (Crit — Constitutional, Cross-Platform Sovereignty, and Core Architecture):
 
-  * Systemic Scope: Affects the foundational identity of the community, alters the Core Regulation/Manifesto or voting mechanics, executes global cross-platform interventions, or touches Root-level platform sovereignty (actions that sit technically above standard administrators and local bots, making them irreversible by standard local mechanisms).
+
+  * Systemic Scope: Affects the foundational identity of the community, alters core community documents or voting mechanics, executes global cross-platform interventions, or touches Root-level platform sovereignty (actions that sit technically above standard administrators and local bots, making them irreversible by standard local mechanisms).
   * [Название]: Changing the official name of the community.
   * [Лого]: Changing the official overarching logo (main avatar/emblem) of the entire community.
   * [Система голосования]: Altering the mechanics, code, or parameters of the voting architecture (SVA), RedAdapter/ACS core logic, quorum formulas, cooldowns, or ACI standards.
-  * [Площадки]: Executing or overriding any action from Tier 1 to Tier 3 on any specific platform (or multiple platforms) via a global community-wide vote, as well as questioning a platform's legitimacy, suspending its voting rights, or completely disconnecting/revoking its status as a community platform (under Regulation 0.4.1).
-  * [Фундамент]: Modifying the Core Regulation (Регламент) or Manifesto; granting official status to a new voting platform; transferring root platform ownership (e.g., Discord Server Owner crown, root bot hosting/database control, domain ownership); migrating or shutting down the core community; shifting the core theme or ideological foundation of the community.
+  * [Площадки]: Executing or overriding any action from Tier 1 to Tier 3 on any specific platform (or multiple platforms) via a global community-wide vote, as well as questioning a platform's legitimacy, suspending its voting rights, or completely disconnecting/revoking its status as a community platform.
+  * [Фундамент]: Modifying foundational community documents (such as core charters, overarching rules, or manifestos); granting official status to a new voting platform; transferring root platform ownership (e.g., Discord Server Owner crown, root bot hosting/database control, domain ownership); migrating or shutting down the core community; shifting the core theme or ideological foundation of the community.
 
 FINAL OUTPUT FORMAT:
 Upon processing the text, ONLY the following data structure must be returned:
@@ -259,6 +267,57 @@ Theme of the text: [Tier 1, Tier 2, Tier 3, or Tier 4]
 <img width="814" height="650" alt="изображение" src="https://github.com/user-attachments/assets/df731cdb-6711-47f7-bd11-19832b7f0b9b" />
 
 Конечно, подобный вариант ACI и проверка с помощью популярных ИИ-моделей не лучший вариант, но это лишь пример, на деле, как я уже говорил, ACI может быть чем угодно.
+
+---
+
+### Межплатформенная синхронизация и глобальные голосования
+
+Так как данная версия архитектуры привязана к сообществу «Горизонт», я решил вынести сюда механику сетевой реализации голосований для случаев, когда сообщество делиться на автономии и требуется решать глобальные вопросы, затрагивающие всё сообщество целиком, исходя из голосований на каждой отдельной автономной платформе.
+
+Техническую систему реализации данной архитектуры далее буду именовать АСУ.
+>**АСУ (Автоматизированная Система Управления)** — это программно-технический исполнительный комплекс (боты, скрипты, веб-интерфейсы и базы данных), отвечающий за проведение голосований по правилам архитектуры, учёт активности для кворума, обработку апелляций, автоматическое исполнение решений без прямого участия Управленцев (назначение и снятие ролей, ротация, ограничение прав) и многое другое. В масштабах всего Сообщества АСУ может быть реализована как единая межплатформенная система либо как синхронизированная сеть отдельных локальных АСУ на каждой площадке.
+
+Если на младших тирах (с I по III) в данной архитектуре каждая площадка выступает как самостоятельный расчётный блок со своим локальным кворумом и внутренней системой модерирования, то при запуске глобального голосования (IV тир) логика работы меняется. Отдельные платформы перестают быть автономными счётчиками и работают исключительно как терминалы ввода-вывода (далее — шлюзы), подключённые к единому состоянию в общей сети АСУ (т.е. расчёты зачастую реализуются будто все действия происходят в рамках одной платформы).
+
+Следует разобрать три главные проблемы, которые возникают при выходе голосования за пределы одной площадки, и то, как их стоит решить.
+
+**1. Как считать процент победы?**
+
+Первая проблема — подсчёт голосов между неравными по размеру платформами. В глобальном голосовании нельзя просто посчитать процент «за» на каждой площадке отдельно, а затем вывести среднее арифметическое.
+
+При старте опроса IV тира все подключённые шлюзы отправляют голоса в единый глобальный пул АСУ, где за каждым верифицированным участником закреплён один общий межплатформенный профиль. Если один и тот же человек проголосовал на сайте, а через день передумал и нажал другой вариант в Discord или Teamspeak, система не должна делать дубль в статистике, а просто перезаписывать старый голос новым. Когда таймер голосования истекает, АСУ один раз считает отношение суммарного веса «за» к общему пулу весов по всей этой единой базе без оглядки на то, через какую именно платформу пришёл конкретный голос.
+
+**2. Как синхронизировать кворум разных по темпу площадок?**
+
+Темп общения на платформах радикально отличается: в быстром мессенджере пишут сотни коротких реплик, а на форуме — десятки осмысленных постов за месяц. Если просто свалить все сообщения в один массив, самая «болтливая» площадка задерёт общую медиану так высоко, что участники остальных платформ искусственно превратятся в «неактивных».
+
+Математика межплатформенного подсчёта пользователей:
+
+```
+Каждая площадка сначала считает собственную локальную медиану сообщений за 30 дней. Активность пользователя на площадке переводится из «штук сообщений» в долю от её локальной медианы, после чего эти доли со всех привязанных аккаунтов человека складываются. Все уникальные участники, достигшие порога хотя бы на одной площадке (или набравшие единицу в сумме по сети), формируют глобальное число активных пользователей.
+```
+
+— Так активность оценивается по меркам конкретной среды, но в глобальный кворум один человек всегда даёт строго одну единицу — даже если общается понемногу сразу на нескольких платформах.
+
+**3. Как синхронизировать отклонения и защиту по ACI?**
+
+В локальных голосованиях ошибку или саботаж одного модератора легко исправляют его коллеги по площадке, возвращая опрос в работу с защитой от повторного сноса. Но на IV тире голосование едино для всей сети: нельзя допустить, чтобы опрос отменился только на части платформ, чтобы его снёс в одно лицо модератор малой площадки или чтобы крупная платформа продавила отмену за счёт раздутого штата стаффа.
+
+Чтобы исключить как рассинхрон, так и саботаж на местах, глобальная валидация ACI работает через алгоритм межплатформенного арбитража:
+
+```
+1. Атомарность статуса и запуск спора: Глобальное голосование имеет единый статус во всей сети АСУ — оно либо идёт везде, либо отменено везде. Нажатие кнопки «Отклонить» на любой площадке не удаляет голосование, а записываеься в счётчик сети иницируя «спор» — 24 часовой момент голосования, когда его хотят оспорить или легитимизировать (также желательно уведомить все площадки через сеть или единое АСУ).
+
+2. Управленцы выносят вердикт — «Отклонить» (-1) или «Легитимно» (+1). Один физический управленец имеет в споре строго один голос и может представлять только одну площадку, даже если он служит сразу на нескольких платформ сети.
+
+3. Чтобы окончательно аннулировать глобальное голосование по ACI, вариант «Отклонить» должен выполнить сразу два условия в конце спора:
+   — получить поддержку управленцев более чем с 50% допущенных к проверке площадок сети;
+   — иметь строгий перевес над голосами «Легитимно» (сумма весов меньше нуля).
+
+4. Презумпция легитимности: Если условия для отмены не выполнены за 24 часа — либо если аналогичный двойной порог раньше набрал вариант «Легитимно» — спор закрывается, а голосование продолжает работу и получает глобальный иммунитет от повторных сносов.
+```
+
+— Кроме того, здесь заложен естественный предохранитель от конфликта интересов. Если мы снова посмотрим на категорию `[Площадки]` в IV тире, то увидим, что глобальное голосование может быть запущено для принудительного вмешательства в дела конкретной платформы или лишения её статуса площадки. В такой ситуации управленцы затрагиваемой площадки технически отстраняются АСУ от проверки этого голосования по ACI — право валидации остаётся только за нейтральными площадками сети.
 
 ---
 
