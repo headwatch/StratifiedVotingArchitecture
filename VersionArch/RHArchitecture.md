@@ -171,7 +171,7 @@ Adequacy Check Instructions (ACI) — это любая комплексная �
 ADEQUACY CHECK INSTRUCTIONS (ACI)
 
 EVALUATION MANDATE AND OUTPUT REQUIREMENT:
-The evaluation must culminate in_exactly two strictly formatted outputs based on the structural and systemic impact analysis of the submitted text:
+The evaluation must culminate in exactly two strictly formatted outputs based on the structural and systemic impact analysis of the submitted text:
 - Legitimacy [0 or 1]: Return 1 (TRUE/VALID) if and only if the text unconditionally satisfies ALL criteria outlined in Sections I and II. Return 0 (FALSE/INVALID) if the text violates even a single sub-clause of this protocol.
 - Theme of the text [Tier 1, Tier 2, Tier 3, or Tier 4]: The structural intent and maximum technical impact of the text must be definitively classified into one of four systemic Tiers (defined in Section III).
 
@@ -296,7 +296,7 @@ Theme of the text: [Tier 1, Tier 2, Tier 3, or Tier 4]
 5. Инициировать спор можно не позднее чем за 48 часов до окончания голосования. В противном случае голосование полностью легитимизируется.
 ```
 
-— Кроме того, здесь заложен естественный предохранитель от конфликта интересов. Если мы снова посмотрим на категорию `[Площадки]` в IV тире, то увидим, что глобальное голосование может быть запущено для принудительного вмешательства в дела конкретной платформы или лишения её статуса площадки. В такой ситуации управленцы затрагиваемой площадки технически отстраняются АСУ от проверки этого голосования по ACI — право валидации остаётся только за нейтральными площадками сети.
+— Кроме того, здесь заложен естественный предохранитель от конфликта интересов. Если мы снова посмотрим на категорию `[Площадки и отдельные Ресурсы]` в IV тире, то увидим, что глобальное голосование может быть запущено для принудительного вмешательства в дела конкретной платформы или лишения её статуса площадки. В такой ситуации управленцы затрагиваемой площадки технически отстраняются АСУ от проверки этого голосования по ACI — право валидации остаётся только за нейтральными площадками сети.
 
 ---
 
