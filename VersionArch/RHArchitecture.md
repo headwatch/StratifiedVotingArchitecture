@@ -47,11 +47,12 @@ I. Low
 Кворум по активным пользователям: 15%
 Время проведения: 24h
 
-- **`[Косметика]`** — Добавление новых эмодзи, стикеров, смена баннера сервера, изменение цветов ролей.
-    
-- **`[Ивенты]`** — Предложения собраться поиграть, посмотреть фильм, провести временный конкурс на выходных (с созданием события в Discord).
-    
-- **`[Опросы]`** — Голосования без последствий для сервера (например: «Какая часть игры лучше?», «Что смотрим на выходных?»).
+- **`[Косметика]`** — Внешнее и звуковое оформление Площадки или её зависимых Ресурсов без изменения официальной символики: добавление и удаление эмодзи, стикеров, звуковых эффектов, смена баннеров, фонов, цветов ролей и косметическая правка описаний.
+
+- **`[Ивенты]`** — Организация разовых и временных активностей (игр, просмотров, стримов, конкурсов, викторин, общих сборов), включая создание временных каналов или комнат на период проведения события.
+
+- **`[Опросы]`** — Консультативные голосования, сбор мнений, неформальные обсуждения и символические инициативы, не влекущие за собой технических, структурных, правовых или административных последствий для Площадки и Ресурсов.
+
 
 II. Mid
 
@@ -60,11 +61,12 @@ II. Mid
 Кворум по активным пользователям: 30%
 Время проведения: 2d
 
-- **`[Каналы]`** — Создание, удаление, переименование текстовых или голосовых каналов. Перемещение каналов по категориям.
-    
-- **`[Роли]`** — Создание новых и удаление *пользовательских* ролей.
-    
-- **`[Формат]`** — Введение постоянного расписания, утверждение постоянных активностей.
+- **`[Каналы]`** — Изменение внутренней структуры и навигации текущей Площадки или зависимого Ресурса: создание, удаление, переименование, архивация и перемещение текстовых, голосовых или форумных разделов (без урезания базового технического доступа полноценных участников), а также отмена быстрых технических правок Управленцев.
+
+- **`[Роли]`** — Создание, изменение и удаление пользовательских ролей, тегов уведомлений, значков и открытых групп по интересам, не предоставляющих прав Управленца и не ограничивающих базовый доступ к каналам связи.
+
+- **`[Формат]`** — Утверждение постоянного расписания, регулярных рубрик, шаблонов оформления, справочных и информационных материалов, а также запуск внутренних пользовательских проектов и вспомогательных инструментов, не требующих привилегированных технических прав.
+
 
 III. High
 
@@ -73,19 +75,17 @@ III. High
 Кворум по активным пользователям: 50%
 Время проведения: 3d
 
-- **`[Правосудие]`** — Голосования за бан, кик, пермач или длительный мут конкретного пользователя, а также амнистии (разбан) и публичные апелляции.
+- **`[Правосудие]`** — Применение и снятие индивидуальных санкций: изгнание (бан, кик), применение или отмена Изоляции, перевод пользователя в статус Ограниченного участника, длительные ограничения общения (муты), амнистии, рассмотрение Публичных апелляций, а также одобрение технических дополнительных аккаунтов без права голоса.
 
-    
-- **`[Локальные правила]`** — Добавление, изменение и удаление локальных подправил конкретной площадки, изменение тяжести наказаний за локальные нарушения.
+- **`[Локальные правила]`** — Принятие, изменение и удаление локальных подправил Площадки и её зависимых Ресурсов, изменение тяжести локальных наказаний и порядка входа по заявкам, а также настройка локальных правил работы АСУ (параметров шаблонных голосований, локальных порогов, таймеров и регламентов автоматического исполнения в пределах автономии Площадки).
 
-    
-- **`[Стафф]`** — Выборы новых модераторов, хелперов, админов площадки. Голосования за лишение управленца его прав (импичмент) и изменение локальных правил ротации/анкетирования.
+- **`[Стафф]`** — Избрание, назначение и снятие с должности (импичмент) Управленцев на Площадке и зависимых Ресурсах, а также утверждение и изменение локальных алгоритмов отбора, анкетирования, стажировки, ротации и межресурсного влияния должностного статуса.
 
-    
-- **`[Интеграции]`** — Добавление на площадку ботов и внешних интеграций, которым требуются широкие права (удаление сообщений, выдача ролей, баны).
+- **`[Подконтрольные Ресурсы]`** — Создание, присоединение, реорганизация, изменение степени автономии или закрытие зависимых Ресурсов (дочерних серверов, информационных каналов, вики, игровых серверов и подчинённых проектов Площадки), не обладающих статусом самостоятельной Площадки.
 
+- **`[Интеграции]`** — Добавление, настройка и удаление ботов, скриптов, локальных модулей АСУ и внешних интеграций на Площадке или зависимых Ресурсах, которым требуются привилегированные права (управление сообщениями, ролями, каналами или ограничениями участников).
 
-- **`[Локальное лого]`** — Смена аватара (логотипа) конкретной отдельной площадки, не меняющая основную символику всего сообщества.
+- **`[Локальное лого]`** — Смена локального аватара (логотипа) или локального отображаемого названия конкретной Площадки либо её зависимого Ресурса, не затрагивающая общую символику и название всего сообщества.
 
 
 IV. Crit
@@ -95,20 +95,15 @@ IV. Crit
 Кворум по активным пользователям: 75%
 Время проведения: 7d
 
-- **`[Название]`** — Смена официального названия сообщества.
+- **`[Название]`** — Смена официального общего названия всего сообщества.
 
+- **`[Лого]`** — Смена основного (общего) логотипа, эмблемы и главной визуальной символики всего сообщества.
 
-- **`[Лого]`** — Смена основного (общего) логотипа сообщества.
+- **`[Система голосования]`** — Изменение архитектуры прямой демократии, базовой логики общесетевой АСУ, глобальных формул расчёта кворума и весов, параметров тиров, времени охлаждения, алгоритмов межплощадочной синхронизации и стандартов ACI.
 
+- **`[Площадки и отдельные Ресурсы]`** — Принудительное принятие или отмена любого решения с I по III тир на любой отдельной Площадке или Ресурсе путём глобального голосования, пресечение локального саботажа, наделение нового пространства статусом полноправной Площадки (или автономного Ресурса сети), а также приостановка легитимности или полное отключение Площадки от сети.
 
-- **`[Система голосования]`** — Изменение работы самой системы голосований (изменение процентов кворума, времени КД, логики АСУ, стандартов ACI).
-
-
-- **`[Площадки]`** — Принудительное проведение или отмена любого действия от I до III тира на любой отдельной платформе (или нескольких платформах) методом глобального голосования, а также приостановка легитимности или полное отключение площадки.
-
-    
-- **`[Фундамент]`** — Изменение основного Регламента или Манифеста, смена основной тематики или идеологического вектора сообщества, передача корневых прав владения инфраструктурой, подключение новых опорных платформ.
-
+- **`[Фундамент]`** — Изменение высших учредительных и идеологических документов сообщества, смена глобальной тематики или базового вектора развития, передача корневых технических прав владения инфраструктурой (главных серверов, доменов, баз данных и хостинга ядра АСУ), а также глобальная реорганизация или самороспуск сообщества.
 ```
 
 — В данной таблице есть следующие параметры:
@@ -180,64 +175,53 @@ Adequacy Check Instructions (ACI) — это комплексная систем
 ADEQUACY CHECK INSTRUCTIONS (ACI)
 
 EVALUATION MANDATE AND OUTPUT REQUIREMENT:
-The evaluation must culminate in exactly two strictly formatted outputs based on the structural and systemic impact analysis of the submitted text.
+The evaluation must culminate in_exactly two strictly formatted outputs based on the structural and systemic impact analysis of the submitted text:
 - Legitimacy [0 or 1]: Return 1 (TRUE/VALID) if and only if the text unconditionally satisfies ALL criteria outlined in Sections I and II. Return 0 (FALSE/INVALID) if the text violates even a single sub-clause of this protocol.
-
-
 - Theme of the text [Tier 1, Tier 2, Tier 3, or Tier 4]: The structural intent and maximum technical impact of the text must be definitively classified into one of four systemic Tiers (defined in Section III).
-
 
 
 SECTION I: ANTI-SPAM AND BASIC COHERENCE
 1. Syntactic and Semantic Integrity: The text must consist of coherent language expressing a recognizable proposal, question, or appeal. Randomized character strings, word salads, flood, or empty messages without a clear subject immediately nullify the proposal (Legitimacy: 0).
-
-
-2. Actionable Intent: Unless submitted as a casual poll under Tier 1 [Опросы], the text must clearly state what concrete change, action, or decision is being put to a vote, along with its basic reason and expected outcome.
+2. Actionable Intent: Unless submitted as a casual poll under Tier 1 [Опросы], the text must clearly state what concrete change, action, or decision is being put to a vote, along with its basic reason and expected outcome. Irresolvable ambiguity that makes the required action impossible to determine returns Legitimacy: 0.
 
 
 SECTION II: SYSTEMIC PRESERVATION
-1. Anti-Sabotage Filter: The democratic mechanism shall not be utilized for the intentional destruction of the community. Any vote aimed at deleting the entire community, wiping core infrastructure without an operational transition plan (excluding legitimate cross-platform interventions or platform disconnection under Tier 4 [Площадки]), mass-banning users without cause, or disabling fundamental security protocols immediately returns Legitimacy: 0.
-
+1. Anti-Sabotage Filter: The voting mechanism shall not be utilized for the intentional destruction of the community. Any proposal aimed at wiping core infrastructure without an operational transition plan (excluding legitimate reorganization or disconnection under Tier 3 [Подконтрольные Ресурсы] and Tier 4 [Площадки и отдельные Ресурсы]), mass-banning members without cause, or disabling fundamental security protocols against raids and bots immediately returns Legitimacy: 0.
+2. Fundamental Guarantees Protection: Local proposals (Tier 1–3) cannot strip Full Members of their baseline rights (the right to vote, equal vote weight, and standard technical access to main communication channels) or deprive Restricted Members of their right to initiate a Public Appeal.
 
 
 SECTION III: SYSTEMIC IMPACT AND TIER CLASSIFICATION
-Core Classification Principle (Substance Over Form): The text must be classified based on its highest technical impact, permission level required, and reversibility — NOT by the casual wording used by the author. If a proposal combines multiple actions or disguises privileged permissions under a minor request, it MUST be assigned to the highest applicable Tier. When a proposal falls into a gray area between two Tiers, always escalate to the higher Tier.
+Core Classification Principle (Substance Over Form): The text must be classified based on its highest technical, legal, and structural impact, permission level required, and reversibility — NOT by the casual wording used by the author. If a proposal combines multiple actions across different levels, disguises privileged permissions under a minor request, or falls into a gray area between two Tiers, it MUST always be escalated to the higher Tier.
 
-- TIER 1 (Low — Cosmetic, Social, Non-Structural):
+- TIER 1 (Low — Cosmetic, Social, and Non-Structural):
+  * Systemic Scope: Zero impact on platform structure, rules, access permissions, or governance. Easily reversible, temporary, or purely informational actions.
+  * [Косметика]: Visual and audio customization of a Platform or its Dependent Resources without altering official community symbolism: adding or removing emojis, stickers, sound effects, changing banners, backgrounds, role colors, and making cosmetic edits to descriptions.
+  * [Ивенты]: Organizing one-time or temporary activities (games, watch parties, streams, contests, quizzes, gatherings), including creating temporary channels or rooms for the duration of the event.
+  * [Опросы]: Consultative polls, opinion gathering, informal discussions, and symbolic initiatives with no technical, structural, legal, or administrative consequences for the Platform or Resources.
 
+- TIER 2 (Mid — Workspace Structure and Non-Privileged Functionality):
+  * Systemic Scope: Alters internal navigation, channel organization, or standard user roles on the current Platform or Dependent Resource without granting Manager privileges, changing behavioral rules, or restricting baseline access for Full Members.
+  * [Каналы]: Modifying the internal structure and navigation of the current Platform or Dependent Resource: creating, deleting, renaming, archiving, and moving text, voice, or forum sections (without restricting baseline technical access for Full Members), as well as reverting rapid technical adjustments made by Managers.
+  * [Роли]: Creating, modifying, and deleting standard user roles, notification tags, badges, and open interest groups that grant zero Manager privileges and do not restrict baseline access to communication channels.
+  * [Формат]: Establishing permanent schedules, recurring segments, formatting templates, reference materials, and launching internal member-driven projects or auxiliary tools that do not require privileged technical permissions.
 
-  * Systemic Scope: Zero impact on server structure, rules, permissions, or permanent layout. Easily reversible or purely temporary/informational.
-  * [Косметика]: Adding new emojis or stickers, changing the server banner, or modifying existing role colors (strictly excludes changing any local platform logo or the overarching community logo/name).
-  * [Ивенты]: Proposals to gather for games, watch movies, or hold temporary weekend contests (including creating temporary event rooms).
-  * [Опросы]: Casual polls and discussions with no technical, administrative, or rule-changing consequences for the server.
+- TIER 3 (High — Local Governance, Justice, Local ACS, and Dependent Resources):
+  * Systemic Scope: Affects individual member rights and restrictions, grants or revokes Manager status, modifies local sub-rules and local Automated Control System (ACS) parameters, or manages Dependent Resources and privileged integrations within the autonomy of a single Platform.
+  * [Правосудие]: Applying and lifting individual sanctions: expulsion (ban, kick), applying or lifting Isolation, transitioning a user to Restricted Member status, long-term communication restrictions (mutes), amnesties, reviewing Public Appeals, and approving technical secondary accounts without voting rights.
+  * [Локальные правила]: Adopting, modifying, and removing local sub-rules of a Platform and its Dependent Resources, altering the severity of local penalties and application-based entry procedures, as well as configuring local ACS operating rules (parameters of template votes, local thresholds, timers, and automated execution protocols within the Platform's autonomy).
+  * [Стафф]: Electing, appointing, and removing (impeaching) Managers on a Platform and its Dependent Resources, as well as approving and modifying local selection algorithms, questionnaires, probation periods, rotation rules, and cross-resource status inheritance.
+  * [Подконтрольные Ресурсы]: Creating, attaching, reorganizing, altering the degree of autonomy, or closing Dependent Resources (sub-servers, informational channels, wikis, game servers, and subordinate projects) that do not hold the status of an independent Platform.
+  * [Интеграции]: Adding, configuring, and removing bots, scripts, local ACS modules, and external integrations on a Platform or Dependent Resources that require privileged permissions (managing messages, roles, channels, or member restrictions).
+  * [Локальное лого]: Changing the local avatar (logo) or local display name of a specific Platform or its Dependent Resource without affecting the overarching symbolism and official name of the entire community.
 
-- TIER 2 (Mid — Workspace Structure and Non-Privileged UX):
+- TIER 4 (Crit — Global Sovereignty, Core Architecture, and Community Foundation):
+  * Systemic Scope: Affects the entire community as a whole, its foundational and ideological documents, overarching symbolism, core voting architecture, root infrastructure, or executes mandatory cross-platform interventions.
+  * [Название]: Changing the official overarching name of the entire community.
+  * [Лого]: Changing the primary (overarching) logo, emblem, and main visual symbolism of the entire community.
+  * [Система голосования]: Modifying the direct democracy architecture, core network-wide ACS logic, global quorum and weight calculation formulas, tier parameters, cooldown durations, cross-platform synchronization algorithms, and ACI standards.
+  * [Площадки и отдельные Ресурсы]: Forcibly enacting or overturning any Tier 1 to Tier 3 decision on any specific Platform or Resource via a global vote, suppressing local sabotage, granting a new space the status of a full Platform (or autonomous network Resource), as well as suspending a Platform's legitimacy or completely disconnecting it from the network.
+  * [Фундамент]: Modifying supreme foundational and ideological documents of the community, shifting the global theme or core developmental vector, transferring root technical ownership of infrastructure (main servers, domains, databases, and core ACS hosting), as well as global reorganization or dissolution of the community.
 
-
-  * Systemic Scope: Alters the daily organization, channels, or non-privileged roles of the platform without granting any moderation/administrative permissions or changing behavioral rules. Fully reversible by standard staff.
-  * [Каналы]: Creating, deleting, renaming, or moving text and voice channels or categories without restricting base user access rights.
-  * [Роли]: Creating, modifying, or deleting standard user roles (notification tags, interest roles, cosmetic badges) that possess ZERO administrative, moderation, or channel-restriction permissions.
-  * [Формат]: Establishing permanent schedules, recurring community activities, or standardizing channel templates.
-
-- TIER 3 (High — Local Governance, Justice, Privileged Access, and Local Rules):
-
-
-  * Systemic Scope: Affects individual user rights/punishments, grants or revokes delegated administrative/moderation privileges (within the bounds of a specific platform), or modifies local platform sub-rules. All actions here remain subordinate to foundational community documents and can be enforced or reversed by the voting system.
-  * [Правосудие]: Votes for banning, kicking, permanently banning, isolating, or issuing a long-term mute to a specific user, as well as amnesties (unbans) and public appeals from Restricted Users.
-  * [Локальные правила]: Adding, removing, or modifying local platform sub-rules or altering the severity of penalties for local violations (strictly excludes changing overarching community rules, charters, or manifestos).
-  * [Стафф]: Electing or impeaching local moderators, helpers, and standard administrators whose powers are delegated and revocable within the system; modifying local recruitment questionnaires and staff rotation rules.
-  * [Интеграции]: Adding, removing, or configuring bots and external webhooks that require privileged permissions (message management, role assignment, moderation).
-  * [Локальное лого]: Changing the local avatar (logo) of a specific platform without altering the overarching main logo of the community.
-
-- TIER 4 (Crit — Constitutional, Cross-Platform Sovereignty, and Core Architecture):
-
-
-  * Systemic Scope: Affects the foundational identity of the community, alters core community documents or voting mechanics, executes global cross-platform interventions, or touches Root-level platform sovereignty (actions that sit technically above standard administrators and local bots, making them irreversible by standard local mechanisms).
-  * [Название]: Changing the official name of the community.
-  * [Лого]: Changing the official overarching logo (main avatar/emblem) of the entire community.
-  * [Система голосования]: Altering the mechanics, code, or parameters of the voting architecture (SVA), RedAdapter/ACS core logic, quorum formulas, cooldowns, or ACI standards.
-  * [Площадки]: Executing or overriding any action from Tier 1 to Tier 3 on any specific platform (or multiple platforms) via a global community-wide vote, as well as questioning a platform's legitimacy, suspending its voting rights, or completely disconnecting/revoking its status as a community platform.
-  * [Фундамент]: Modifying foundational community documents (such as core charters, overarching rules, or manifestos); granting official status to a new voting platform; transferring root platform ownership (e.g., Discord Server Owner crown, root bot hosting/database control, domain ownership); migrating or shutting down the core community; shifting the core theme or ideological foundation of the community.
 
 FINAL OUTPUT FORMAT:
 Upon processing the text, ONLY the following data structure must be returned:
