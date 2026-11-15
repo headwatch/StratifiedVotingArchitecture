@@ -197,35 +197,42 @@ ADEQUACY CHECK INSTRUCTIONS (ACI)
 EVALUATION MANDATE AND OUTPUT REQUIREMENT:
 The evaluation must culminate in exactly two strictly formatted outputs based on the structural and systemic impact analysis of the submitted text:
 - Legitimacy [0 or 1]: Return 1 (TRUE/VALID) if and only if the text unconditionally satisfies ALL criteria outlined in Sections I and II. Return 0 (FALSE/INVALID) if the text violates even a single sub-clause of this protocol.
-- Theme of the text [Tier 1, Tier 2, Tier 3, or Tier 4]: The structural intent and maximum technical impact of the text must be definitively classified into one of four systemic Tiers (defined in Section III).
+
+- Theme of the text [Tier 1, Tier 2, Tier 3, Tier 4, or N/A]: The structural intent and maximum technical impact of the text must be definitively classified into one of four systemic Tiers (defined in Section III), or returned as N/A if the text is incoherent or unclassifiable under Legitimacy: 0.
+
 
 
 SECTION I: ANTI-SPAM AND BASIC COHERENCE
 1. Syntactic and Semantic Integrity: The text must consist of coherent language expressing a recognizable proposal, question, or appeal. Randomized character strings, word salads, flood, or empty messages without a clear subject immediately nullify the proposal (Legitimacy: 0).
+
 2. Actionable Intent: Unless submitted as a casual poll under Tier 1 [Опросы], the text must clearly state what concrete change, action, or decision is being put to a vote, along with its basic reason and expected outcome. Irresolvable ambiguity that makes the required action impossible to determine returns Legitimacy: 0.
 
 
 SECTION II: SYSTEMIC PRESERVATION
 1. Anti-Sabotage Filter: The voting mechanism shall not be utilized for the intentional destruction of the community. Any proposal aimed at wiping core infrastructure without an operational transition plan (excluding legitimate reorganization or disconnection under Tier 3 [Подконтрольные Ресурсы] and Tier 4 [Площадки и отдельные Ресурсы]), mass-banning members without cause, or disabling fundamental security protocols against raids and bots immediately returns Legitimacy: 0.
-2. Fundamental Guarantees Protection: Local proposals (Tier 1–3) cannot strip Full Members of their baseline rights (the right to vote, equal vote weight, and standard technical access to main communication channels) or deprive Restricted Members of their right to initiate a Public Appeal.
+
+2. Fundamental Guarantees Protection: Local proposals (Tier 1–3) cannot strip Full Members of their baseline rights (the right to vote, equal vote weight, and standard technical access to main communication channels) — except as a targeted individual sanction or status transition under Tier 3 [Правосудие] — or deprive Restricted Members of their right to initiate a Public Appeal.
 
 
 SECTION III: SYSTEMIC IMPACT AND TIER CLASSIFICATION
 Core Classification Principle (Substance Over Form): The text must be classified based on its highest technical, legal, and structural impact, permission level required, and reversibility — NOT by the casual wording used by the author. If a proposal combines multiple actions across different levels, disguises privileged permissions under a minor request, or falls into a gray area between two Tiers, it MUST always be escalated to the higher Tier.
 
 - TIER 1 (Low — Cosmetic, Social, and Non-Structural):
+
   * Systemic Scope: Zero impact on platform structure, rules, access permissions, or governance. Easily reversible, temporary, or purely informational actions.
   * [Косметика]: Visual and audio customization of a Platform or its Dependent Resources without altering official community symbolism: adding or removing emojis, stickers, sound effects, changing banners, backgrounds, role colors, and making cosmetic edits to descriptions.
   * [Ивенты]: Organizing one-time or temporary activities (games, watch parties, streams, contests, quizzes, gatherings), including creating temporary channels or rooms for the duration of the event.
   * [Опросы]: Consultative polls, opinion gathering, informal discussions, and symbolic initiatives with no technical, structural, legal, or administrative consequences for the Platform or Resources.
 
 - TIER 2 (Mid — Workspace Structure and Non-Privileged Functionality):
+
   * Systemic Scope: Alters internal navigation, channel organization, or standard user roles on the current Platform or Dependent Resource without granting Manager privileges, changing behavioral rules, or restricting baseline access for Full Members.
   * [Каналы]: Modifying the internal structure and navigation of the current Platform or Dependent Resource: creating, deleting, renaming, archiving, and moving text, voice, or forum sections (without restricting baseline technical access for Full Members), as well as reverting rapid technical adjustments made by Managers.
   * [Роли]: Creating, modifying, and deleting standard user roles, notification tags, badges, and open interest groups that grant zero Manager privileges and do not restrict baseline access to communication channels.
   * [Формат]: Establishing permanent schedules, recurring segments, formatting templates, reference materials, and launching internal member-driven projects or auxiliary tools that do not require privileged technical permissions.
 
 - TIER 3 (High — Local Governance, Justice, Local ACS, and Dependent Resources):
+
   * Systemic Scope: Affects individual member rights and restrictions, grants or revokes Manager status, modifies local sub-rules and local Automated Control System (ACS) parameters, or manages Dependent Resources and privileged integrations within the autonomy of a single Platform.
   * [Правосудие]: Applying and lifting individual sanctions: expulsion (ban, kick), applying or lifting Isolation, transitioning a user to Restricted Member status, long-term communication restrictions (mutes), amnesties, reviewing Public Appeals, and approving technical secondary accounts without voting rights.
   * [Локальные правила]: Adopting, modifying, and removing local sub-rules of a Platform and its Dependent Resources, altering the severity of local penalties and application-based entry procedures, as well as configuring local ACS operating rules (parameters of template votes, local thresholds, timers, and automated execution protocols within the Platform's autonomy).
@@ -235,6 +242,7 @@ Core Classification Principle (Substance Over Form): The text must be classified
   * [Локальное лого]: Changing the local avatar (logo) or local display name of a specific Platform or its Dependent Resource without affecting the overarching symbolism and official name of the entire community.
 
 - TIER 4 (Crit — Global Sovereignty, Core Architecture, and Community Foundation):
+
   * Systemic Scope: Affects the entire community as a whole, its foundational and ideological documents, overarching symbolism, core voting architecture, root infrastructure, or executes mandatory cross-platform interventions.
   * [Название]: Changing the official overarching name of the entire community.
   * [Лого]: Changing the primary (overarching) logo, emblem, and main visual symbolism of the entire community.
@@ -246,7 +254,7 @@ Core Classification Principle (Substance Over Form): The text must be classified
 FINAL OUTPUT FORMAT:
 Upon processing the text, ONLY the following data structure must be returned:
 Legitimacy: [0 or 1]
-Theme of the text: [Tier 1, Tier 2, Tier 3, or Tier 4]
+Theme of the text: [Tier 1, Tier 2, Tier 3, Tier 4, or N/A]
 ```
 
 — Именно по данном тексту проходит проверка легитимности текста инициативы голосования и его сопоставление с Тиром.
